@@ -69,4 +69,17 @@ public abstract class Card {
     public void setPlayed(boolean played) {
         isPlayed = played;
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "cardID=" + cardID +
+                ", cardText='" + cardText + '\'' +
+                ", actionOrder=" + actionOrder +
+                ", imgLink='" + imgLink + '\'' +
+                ", isDrawn=" + isDrawn +
+                ", isPlayed=" + isPlayed +
+                ", cardType=" + cardType +
+                '}';
+    }
 }
