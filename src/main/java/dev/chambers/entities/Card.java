@@ -5,14 +5,12 @@ public abstract class Card {
     private String cardText;
     private int actionOrder;
     private String imgLink;
-    private boolean isDrawn;
-    private boolean isPlayed;
-
     private CardType cardType;
 
     public Card(){}
 
-    public Card(int cardID, CardType cardType, String cardText, int actionOrder, String imgLink, boolean isDrawn, boolean isPlayed) {
+    /*public Card(int cardID, CardType cardType, String cardText, int actionOrder, String imgLink, boolean isDrawn, boolean isPlayed) {
+        //for action cards
         this.cardType = cardType;
         this.cardID = cardID;
         this.cardText = cardText;
@@ -20,6 +18,15 @@ public abstract class Card {
         this.imgLink = imgLink;
         this.isDrawn = isDrawn;
         this.isPlayed = isPlayed;
+    }*/
+    public Card(int cardID, CardType cardType, String cardText, int actionOrder, String imgLink) {
+        //for other cards
+        this.cardType = cardType;
+        this.cardID = cardID;
+        this.cardText = cardText;
+        this.actionOrder = actionOrder;
+        this.imgLink = imgLink;
+
     }
 
     public int getCardID() {
@@ -54,21 +61,7 @@ public abstract class Card {
         this.imgLink = imgLink;
     }
 
-    public boolean isDrawn() {
-        return isDrawn;
-    }
 
-    public void setDrawn(boolean drawn) {
-        isDrawn = drawn;
-    }
-
-    public boolean isPlayed() {
-        return isPlayed;
-    }
-
-    public void setPlayed(boolean played) {
-        isPlayed = played;
-    }
 
     @Override
     public String toString() {
@@ -77,8 +70,6 @@ public abstract class Card {
                 ", cardText='" + cardText + '\'' +
                 ", actionOrder=" + actionOrder +
                 ", imgLink='" + imgLink + '\'' +
-                ", isDrawn=" + isDrawn +
-                ", isPlayed=" + isPlayed +
                 ", cardType=" + cardType +
                 '}';
     }

@@ -10,7 +10,7 @@ public interface CardDao {
     boolean deleteCard(int cardID);
     boolean updateCard(Card card);
 
-    boolean drawCard(int cardID);
+    //boolean drawCard(int cardID);
     Card getCardByID(int cardID);
 
     ArrayList<Card> getCards(int[] IDs);

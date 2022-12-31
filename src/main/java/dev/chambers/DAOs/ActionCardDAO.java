@@ -22,9 +22,40 @@ public class ActionCardDAO implements CardDao{
         return false;
     }
 
-    @Override
+
     public boolean drawCard(int cardID) {
-        return false;
+        //other card types do not need this function as equipment/powers not drawn
+        try(Connection conn= ConnectionUtil.createConnection()){
+            String sql = "update action_cards set is_drawn=true where card_id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1,cardID);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+            else return false;
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public boolean playCard(int cardID){
+        //other card types do not need this function as equipment/powers not discarded upon use
+        try(Connection conn= ConnectionUtil.createConnection()){
+            String sql = "update action_cards set is_played=true where card_id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1,cardID);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+            else return false;
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
