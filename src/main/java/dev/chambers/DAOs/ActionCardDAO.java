@@ -17,9 +17,28 @@ public class ActionCardDAO implements CardDao{
         return false;
     }
 
-    @Override
-    public boolean updateCard(Card card) {
-        return false;
+    
+
+
+
+
+
+
+    public boolean resetCard(int cardID) {
+        try(Connection conn= ConnectionUtil.createConnection()){
+            String sql = "update action_cards set is_drawn=false, is_played=false where card_id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1,cardID);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+            else return false;
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
 

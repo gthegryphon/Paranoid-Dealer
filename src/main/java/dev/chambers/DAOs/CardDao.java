@@ -8,7 +8,7 @@ public interface CardDao {
     //Card createCard(Card card);
     //manual card entry not really required
     boolean deleteCard(int cardID);
-    boolean updateCard(Card card);
+
 
     //boolean drawCard(int cardID);
     Card getCardByID(int cardID);
