@@ -1,0 +1,10 @@
+dev/chambers/entities/Card.class
+dev/chambers/entities/ActionCard.class
+dev/chambers/DAOs/ActionCardDAO.class
+dev/chambers/DAOs/CardDao.class
+dev/chambers/util/ConnectionUtil.class
+dev/chambers/entities/CardType.class
+dev/chambers/entities/MutantPower.class
+dev/chambers/entities/Deck.class
+dev/chambers/entities/Equipment.class
+dev/chambers/services/DealerService.class

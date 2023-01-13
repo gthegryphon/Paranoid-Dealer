@@ -1,0 +1,11 @@
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/services/DealerService.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/DAOs/CardDao.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/Deck.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/CardType.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/Equipment.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/MutantPower.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/ActionCard.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/DAOs/EquipmentCardDAO.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/util/ConnectionUtil.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/entities/Card.java
+/workspaces/Paranoid-Dealer/src/main/java/dev/chambers/DAOs/ActionCardDAO.java
