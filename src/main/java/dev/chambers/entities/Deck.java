@@ -12,6 +12,11 @@ public class Deck {
         this.sessionID = sessionID;
         this.deckList= deckList;
     }
+    public void drawCard(int cardID){
+        StringBuilder str = new StringBuilder(deckList);
+        str.setCharAt(cardID-1, '1');
+        deckList = str;
+    }
 
     //stretch
     //would track cards drawn/played during the session
