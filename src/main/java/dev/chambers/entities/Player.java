@@ -14,7 +14,7 @@ public class Player{
         this.characterName = characterName;
     }
     public Player(ArrayList<Integer> hand, String characterName){
-        this.playerID = playerID;
+        this.hand=hand;
         this.hand = new ArrayList();
         //only doesn't need player ID if a new player, who doesn't yet have hand
     }

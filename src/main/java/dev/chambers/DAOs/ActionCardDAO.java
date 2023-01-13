@@ -14,14 +14,21 @@ import java.util.ArrayList;
 public class ActionCardDAO implements CardDao{
     @Override
     public boolean deleteCard(int cardID) {
-        return false;
+        try(Connection conn = ConnectionUtil.createConnection()){
+            String sql = "delete from action_cards where card_id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, cardID);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }
     }
-
-    
-
-
-
-
 
 
     public boolean resetCard(int cardID) {

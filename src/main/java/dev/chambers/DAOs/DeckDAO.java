@@ -20,13 +20,7 @@ public class DeckDAO{
         }
     }
     public Deck createDeck(){
-        String emptyDeck = "
-            0000000000
-            0000000000
-            0000000000
-            0000000000
-            0000000000
-            0";//51 digits, one per action card
+        String emptyDeck = "000000000000000000000000000000000000000000000000000";//51 digits, one per action card
         try(Connection conn = ConnectionUtil.createConnection()){
             String sql = "insert into decks values(default, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
